@@ -1,5 +1,5 @@
 $(function() {
-  var button = $("<button>LAZERBEAK</button>").attr("id", "button");
+  var button = $("#button");
   button.click(function() {
     $("audio#bomb").get(0).play();
   });
