@@ -16,6 +16,6 @@
 #button:hover {
   background-color: #f44;
   -moz-box-shadow: 7px 7px #a00, -4px -4px rgba(0,0,0,.2) inset, 4px 4px rgba(255,255,255,.4) inset, 4px 4px 12px #000, 0px 0px 50px 50px red inset;
-  -webkit-box-shadow: 7px 7px #a00, -4px -4px rgba(0,0,0,.2) inset, 4px 4px rgba(255,255,255,.4) inset, 4px 4px 12px #000, 0px 0px 50px 50px red inset;
   box-shadow: 7px 7px #a00, -4px -4px rgba(0,0,0,.2) inset, 4px 4px rgba(255,255,255,.4) inset, 4px 4px 12px #000, 0px 0px 50px 50px red inset;
+  -webkit-box-shadow: 7px 7px #a00, -4px -4px rgba(0,0,0,.2) inset, 4px 4px rgba(255,255,255,.4) inset, 4px 4px 12px #000, 0px 0px 50px red inset;
 }
