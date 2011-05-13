@@ -66,6 +66,12 @@ h1 {
     $top_edge_offset: 2px;
     $shadow_dec: $top_edge_offset $top_edge_offset $background inset, $top_edge_offset + $shadow_offset $top_edge_offset + $shadow_offset $depressed_shadow inset;
     @include box-shadow( $shadow_dec, $bottom_highlight_dec );
+
+    h1 {
+      position: relative;
+      top: $pressed_offset;
+      left: $pressed_offset;
+    }
   }
 
   // Prevent dotted border when button is focused in FF
