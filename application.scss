@@ -29,5 +29,9 @@ body {
 
 #button:active {
   background-color: red - #222;
-  @include box-shadow( 7px 7px #600 inset, -4px -4px rgba(255,255,255,.2) inset );
+  @include box-shadow( 2px 2px #000 inset, 9px 9px #600 inset, 5px 5px red - #222, 7px 7px rgba(255,255,255,.2), 7px 7px red - #222 );
+}
+
+#button::-moz-focus-inner {
+  border: none;
 }
