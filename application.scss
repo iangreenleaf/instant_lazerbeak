@@ -1,8 +1,10 @@
 @import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Orbitron:900&text=LAZERBEAK);
 
+$background: black;
+
 body {
-  background-color: #000;
+  background-color: $background;
 }
 
 h1 {
@@ -12,36 +14,45 @@ h1 {
 }
 
 #button {
-  height: 300px;
-  width: 300px;
-  @include border-radius( 300px );
+  $color: red;
+  $inner_glow: #f22;
+  $shadow: #900;
+  $depressed: $color - #222;
+  $depressed_shadow: #900 - #222;
+
+  $edge_length: 300px;
+  height: $edge_length;
+  width: $edge_length;
+  @include border-radius( $edge_length );
 
   display: block;
   position: absolute;
   top: 50%;
   right: 50%;
-  margin: -150px -150px 0 0;
+  $offset: - $edge_length / 2;
+  margin: $offset $offset 0 0;
 
-  background-color: red;
+  background-color: $color;
   cursor: pointer;
   border: none;
-  @include box-shadow( 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5) );
-}
+  @include box-shadow( 7px 7px $shadow, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5) );
 
-#button:hover {
-  background-color: #f22;
-  @include box-shadow( 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px red inset );
-  -webkit-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px red inset;
-  h1 {
-    text-shadow: 0px 0px 10px rgba(255,255,255,.6);
+  &:hover {
+    background-color: $inner_glow;
+    @include box-shadow( 7px 7px $shadow, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px $color inset );
+    -webkit-box-shadow: 7px 7px $shadow, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px $color inset;
+    h1 {
+      text-shadow: 0px 0px 10px rgba(255,255,255,.6);
+    }
   }
-}
 
-#button:active {
-  background-color: red - #222;
-  @include box-shadow( 2px 2px #000 inset, 9px 9px #600 inset, 5px 5px red - #222, 7px 7px rgba(255,255,255,.2), 7px 7px red - #222 );
-}
+  &:active {
+    background-color: $depressed;
+    @include box-shadow( 2px 2px $background inset, 9px 9px $depressed_shadow inset, 5px 5px $depressed, 7px 7px rgba(255,255,255,.2), 7px 7px $depressed );
+  }
 
-#button::-moz-focus-inner {
-  border: none;
+  // Prevent dotted border when button is focused in FF
+  &::-moz-focus-inner {
+    border: none;
+  }
 }
