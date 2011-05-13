@@ -26,3 +26,8 @@ body {
   @include box-shadow( 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px red inset );
   -webkit-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px red inset;
 }
+
+#button:active {
+  background-color: red - #222;
+  @include box-shadow( 7px 7px #600 inset, -4px -4px rgba(255,255,255,.2) inset );
+}
