@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 body {
   background-color: #000;
 }
@@ -5,9 +7,7 @@ body {
 #button {
   height: 300px;
   width: 300px;
-  -moz-border-radius: 300px;
-  -webkit-border-radius: 300px;
-  border-radius: 300px;
+  @include border-radius( 300px );
 
   display: block;
   position: absolute;
@@ -18,14 +18,11 @@ body {
   background-color: red;
   cursor: pointer;
   border: none;
-  -moz-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5);
-  -webkit-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5);
-  box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5);
+  @include box-shadow( 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5) );
 }
 
 #button:hover {
   background-color: #f33;
-  -moz-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px red inset;
-  box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px red inset;
+  @include box-shadow( 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px 50px red inset );
   -webkit-box-shadow: 7px 7px #900, -4px -4px rgba(0,0,0,.15) inset, 4px 4px rgba(255,255,255,.2) inset, 4px 4px 12px rgba(255,255,255,.5), 0px 0px 50px red inset;
 }
