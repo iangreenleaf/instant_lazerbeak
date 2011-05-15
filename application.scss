@@ -3,6 +3,8 @@
 @import url(http://fonts.googleapis.com/css?family=Meddon);
 
 $background: black;
+$text: white;
+$inactive_opacity: 0.18;
 
 body {
   background-color: $background;
@@ -82,7 +84,7 @@ h1 {
 }
 
 #doomtree, #credits {
-  color: white;
+  color: $text;
   font-family: 'Meddon', serif;
 }
 
@@ -93,6 +95,7 @@ h1 {
   bottom: 0;
   left: 0;
   img {
+    opacity: $inactive_opacity;
     display: block;
     width: $img_width;
     height: $img_height;
@@ -102,6 +105,15 @@ h1 {
     left: $img_width;
     bottom: 0;
     width: 10em;
+    display: none;
+  }
+  &:hover {
+    .disclaimer {
+      display: block;
+    }
+    img {
+      opacity: 1;
+    }
   }
 }
 
@@ -109,4 +121,24 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 10em;
+  text-align: right;
+  a {
+    color: $text;
+    text-decoration: none;
+  }
+  .answer {
+    display: none;
+  }
+  .question {
+    opacity: $inactive_opacity;
+  }
+  &:hover {
+    .question {
+      display: none;
+    }
+    .answer {
+      display: block;
+    }
+  }
 }
