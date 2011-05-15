@@ -99,17 +99,22 @@ h1 {
     display: block;
     width: $img_width;
     height: $img_height;
+    padding-bottom: 5px;
   }
   .disclaimer {
     position: absolute;
     left: $img_width;
     bottom: 0;
-    width: 10em;
+    width: 12em;
     display: none;
   }
   &:hover {
     .disclaimer {
       display: block;
+      &:before {
+        content: "⇜";
+        margin-right: 0.4em;
+      }
     }
     img {
       opacity: 1;
@@ -123,6 +128,7 @@ h1 {
   bottom: 0;
   width: 10em;
   text-align: right;
+  padding-right: 0.6em;
   a {
     color: $text;
     text-decoration: none;
