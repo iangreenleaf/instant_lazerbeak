@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Orbitron:900&text=LAZERBEAK);
+@import url(http://fonts.googleapis.com/css?family=Meddon);
 
 $background: black;
 
@@ -8,7 +9,7 @@ body {
 }
 
 h1 {
-  font-family: 'Orbitron', arial, serif;
+  font-family: 'Orbitron', arial, sans-serif;
   font-size: 2.6em;
   font-weight: 900;
 }
@@ -78,4 +79,34 @@ h1 {
   &::-moz-focus-inner {
     border: none;
   }
+}
+
+#doomtree, #credits {
+  color: white;
+  font-family: 'Meddon', serif;
+}
+
+#doomtree {
+  $img_width: 180px;
+  $img_height: 49px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  img {
+    display: block;
+    width: $img_width;
+    height: $img_height;
+  }
+  .disclaimer {
+    position: absolute;
+    left: $img_width;
+    bottom: 0;
+    width: 10em;
+  }
+}
+
+#credits {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
