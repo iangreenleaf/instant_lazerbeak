@@ -94,12 +94,19 @@ h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  img {
+  #logo {
     opacity: $inactive_opacity;
     display: block;
     width: $img_width;
     height: $img_height;
     padding-bottom: 5px;
+  }
+  #crew {
+    $this_width: 140px;
+    display: none;
+    width: $this_width;
+    margin-left: ( $img_width - $this_width ) / 2;
+    margin-bottom: -30px;
   }
   .disclaimer {
     position: absolute;
@@ -116,8 +123,11 @@ h1 {
         margin-right: 0.4em;
       }
     }
-    img {
+    #logo {
       opacity: 1;
+    }
+    #crew {
+      display: block;
     }
   }
 }
