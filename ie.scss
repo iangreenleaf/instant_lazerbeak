@@ -1,0 +1,25 @@
+// Look, I'm Microsoft, and I make a shitty fucking browser.
+$img_size: 350px;
+
+#button, #button:hover, #button:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+  background: url("../stupid_button.png") no-repeat 0px 0px;
+  width: $img_size;
+  height: $img_size;
+  span {
+    display: none;
+  }
+}
+#button:hover {
+  background: url("../stupid_button.png") no-repeat -1 * $img_size 0px;
+}
+// So stupid, it doesn't do simple things like :active (see ie.scss)
+#button.active {
+  background: url("../stupid_button.png") no-repeat -2 * $img_size 0px;
+}
+#credits .question {
+  display: none;
+}
