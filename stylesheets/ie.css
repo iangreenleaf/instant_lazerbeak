@@ -1,0 +1,29 @@
+/* line 4, ../ie.scss */
+#button, #button:hover, #button:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+  background: url("../stupid_button.png") no-repeat 0px 0px;
+  width: 350px;
+  height: 350px;
+}
+/* line 12, ../ie.scss */
+#button span, #button:hover span, #button:active span {
+  display: none;
+}
+
+/* line 16, ../ie.scss */
+#button:hover {
+  background: url("../stupid_button.png") no-repeat -350px 0px;
+}
+
+/* line 20, ../ie.scss */
+#button.active {
+  background: url("../stupid_button.png") no-repeat -700px 0px;
+}
+
+/* line 23, ../ie.scss */
+#credits .question {
+  display: none;
+}
