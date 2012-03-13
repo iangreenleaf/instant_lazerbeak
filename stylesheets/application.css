@@ -6,6 +6,11 @@ body {
 }
 
 /* line 14, ../application.scss */
+audio {
+  display: none;
+}
+
+/* line 18, ../application.scss */
 #button {
   z-index: 15;
   height: 300px;
@@ -29,14 +34,14 @@ body {
   -o-box-shadow: 7px 7px #990000, -4px -4px rgba(0, 0, 0, 0.15) inset, 4px 4px rgba(255, 255, 255, 0.2) inset, 4px 4px 12px rgba(255, 255, 255, 0.5);
   box-shadow: 7px 7px #990000, -4px -4px rgba(0, 0, 0, 0.15) inset, 4px 4px rgba(255, 255, 255, 0.2) inset, 4px 4px 12px rgba(255, 255, 255, 0.5);
 }
-/* line 15, ../application.scss */
+/* line 19, ../application.scss */
 #button span {
   display: block;
   font-family: 'Orbitron', arial, sans-serif;
   font-size: 2.6em;
   font-weight: 900;
 }
-/* line 53, ../application.scss */
+/* line 57, ../application.scss */
 #button:hover {
   background-color: #ff2222;
   -moz-box-shadow: 7px 7px #990000, -4px -4px rgba(0, 0, 0, 0.15) inset, 4px 4px rgba(255, 255, 255, 0.2) inset, 4px 4px 12px rgba(255, 255, 255, 0.5), 0px 0px 50px 50px red inset;
@@ -45,11 +50,11 @@ body {
   box-shadow: 7px 7px #990000, -4px -4px rgba(0, 0, 0, 0.15) inset, 4px 4px rgba(255, 255, 255, 0.2) inset, 4px 4px 12px rgba(255, 255, 255, 0.5), 0px 0px 50px 50px red inset;
   -webkit-box-shadow: 7px 7px #990000, -4px -4px rgba(0, 0, 0, 0.15) inset, 4px 4px rgba(255, 255, 255, 0.2) inset, 4px 4px 12px rgba(255, 255, 255, 0.5), 0px 0px 50px red inset;
 }
-/* line 60, ../application.scss */
+/* line 64, ../application.scss */
 #button:hover span {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
-/* line 65, ../application.scss */
+/* line 69, ../application.scss */
 #button:active {
   background-color: #dd0000;
   -moz-box-shadow: 2px 2px black inset, 9px 9px #770000 inset, 5px 5px #dd0000, 7px 7px rgba(255, 255, 255, 0.2), 7px 7px #dd0000;
@@ -57,35 +62,35 @@ body {
   -o-box-shadow: 2px 2px black inset, 9px 9px #770000 inset, 5px 5px #dd0000, 7px 7px rgba(255, 255, 255, 0.2), 7px 7px #dd0000;
   box-shadow: 2px 2px black inset, 9px 9px #770000 inset, 5px 5px #dd0000, 7px 7px rgba(255, 255, 255, 0.2), 7px 7px #dd0000;
 }
-/* line 76, ../application.scss */
+/* line 80, ../application.scss */
 #button:active span {
   position: relative;
   top: 2px;
   left: 2px;
 }
-/* line 84, ../application.scss */
+/* line 88, ../application.scss */
 #button::-moz-focus-inner {
   border: none;
 }
 
-/* line 89, ../application.scss */
+/* line 93, ../application.scss */
 #doomtree, #credits {
   color: white;
   font-family: 'Meddon', serif;
 }
 
-/* line 94, ../application.scss */
+/* line 98, ../application.scss */
 #doomtree {
   z-index: 10;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 101, ../application.scss */
+/* line 105, ../application.scss */
 #doomtree a img {
   border: none;
 }
-/* line 104, ../application.scss */
+/* line 108, ../application.scss */
 #doomtree #logo {
   opacity: 0.18;
   display: block;
@@ -93,14 +98,14 @@ body {
   height: 49px;
   padding-bottom: 5px;
 }
-/* line 111, ../application.scss */
+/* line 115, ../application.scss */
 #doomtree #crew {
   width: 140px;
   margin-left: 20px;
   margin-bottom: -30px;
   opacity: 0;
 }
-/* line 118, ../application.scss */
+/* line 122, ../application.scss */
 #doomtree .disclaimer {
   position: absolute;
   left: 180px;
@@ -108,32 +113,28 @@ body {
   width: 12em;
   opacity: 0;
 }
-/* line 124, ../application.scss */
+/* line 128, ../application.scss */
 #doomtree .disclaimer:before {
   content: "⇜";
   margin-right: 0.4em;
 }
-/* line 129, ../application.scss */
-#doomtree #logo, #doomtree #crew, #doomtree .disclaimer {
-  -moz-transition-property: opacity 0.6s ease;
-  -webkit-transition-property: opacity 0.6s ease;
-  -o-transition-property: opacity 0.6s ease;
-  transition-property: opacity 0.6s ease;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-}
 /* line 133, ../application.scss */
+#doomtree #logo, #doomtree #crew, #doomtree .disclaimer {
+  -moz-transition: opacity 0.6s ease;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+/* line 137, ../application.scss */
 #doomtree:hover .disclaimer {
   opacity: 1;
 }
-/* line 136, ../application.scss */
+/* line 140, ../application.scss */
 #doomtree:hover #logo, #doomtree:hover #crew {
   opacity: 1;
 }
 
-/* line 142, ../application.scss */
+/* line 146, ../application.scss */
 #credits {
   z-index: 5;
   position: absolute;
@@ -141,12 +142,12 @@ body {
   bottom: 0;
   text-align: right;
 }
-/* line 148, ../application.scss */
+/* line 152, ../application.scss */
 #credits a {
   color: white;
   text-decoration: none;
 }
-/* line 152, ../application.scss */
+/* line 156, ../application.scss */
 #credits .question, #credits .answer {
   display: inline;
   padding-right: 0.6em;
@@ -154,28 +155,24 @@ body {
   width: 10em;
   right: 0;
   bottom: 0;
-  -moz-transition-property: opacity 0.6s ease;
-  -webkit-transition-property: opacity 0.6s ease;
-  -o-transition-property: opacity 0.6s ease;
-  transition-property: opacity 0.6s ease;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -moz-transition: opacity 0.6s ease;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
-/* line 161, ../application.scss */
+/* line 165, ../application.scss */
 #credits .answer {
   opacity: 0;
 }
-/* line 165, ../application.scss */
+/* line 169, ../application.scss */
 #credits .question {
   opacity: 0.18;
 }
-/* line 169, ../application.scss */
+/* line 173, ../application.scss */
 #credits:hover .question {
   opacity: 0;
 }
-/* line 172, ../application.scss */
+/* line 176, ../application.scss */
 #credits:hover .answer {
   opacity: 1;
 }
