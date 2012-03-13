@@ -11,6 +11,10 @@ body {
   background-color: $background;
 }
 
+audio {
+  display: none;
+}
+
 #button {
   span {
     display: block;
